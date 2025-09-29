@@ -43,10 +43,10 @@
         "assignment_context": "O objetivo desta atividade é criar um portal de notícias com duas páginas: uma home (`index.html`) que exibe uma lista de notícias em formato de 'cards', e uma página de detalhes (`detalhes.html`) que mostra o conteúdo completo de uma notícia. Todo o conteúdo deve ser carregado dinamicamente a partir de uma estrutura de dados (array de objetos) no ficheiro `app.js`. É proibido o uso de frameworks como React, Vue ou Angular.",
         "extra_orientations": "Por favor, foque a análise nos seguintes pontos: 1. A correta implementação da estrutura de dados em `app.js`, garantindo que cada item possua um 'id'. 2. A renderização dinâmica dos cards na `index.html` usando manipulação do DOM. 3. A criação de links em cada card que apontem para `detalhes.html` com o 'id' do item na query string (ex: `detalhes.html?id=1`). 4. A capacidade da página `detalhes.html` de ler o 'id' da URL, encontrar o item correspondente na estrutura de dados e exibir suas informações. 5. Verificar se nenhum framework de JavaScript foi utilizado.",
         "submission_files_to_read": [
-            "index.html",
-            "detalhes.html",
-            "css/styles.css",
-            "app.js"
+            "public/index.html",
+            "public/detalhes.html",
+            "public/styles.css",
+            "public/app.js"
         ]
     },
     "default": {

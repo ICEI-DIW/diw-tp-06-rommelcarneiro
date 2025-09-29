@@ -13,7 +13,7 @@
                                 "weight": 40,
                                 "tests": [
                                     {
-                                        "file": "index.html",
+                                        "file": "public/index.html",
                                         "name": "has_tag",
                                         "calls": [
                                             ["body", 1],
@@ -30,7 +30,7 @@
                                         ]
                                     },
                                     {
-                                        "file": "index.html",
+                                        "file": "public/index.html",
                                         "name": "has_attribute",
                                         "calls": [
                                             ["class", 2]
@@ -42,11 +42,11 @@
                                 "weight": 20,
                                 "tests": [
                                     {
-                                        "file": "index.html",
+                                        "file": "public/index.html",
                                         "name": "check_css_linked"
                                     },
                                     {
-                                        "file": "index.html",
+                                        "file": "public/index.html",
                                         "name": "check_internal_links_to_article",
                                         "calls": [
                                             [4]
@@ -63,15 +63,15 @@
                                 "weight": 50,
                                 "tests": [
                                     {
-                                        "file": "css/styles.css",
+                                        "file": "public/styles.css",
                                         "name": "uses_relative_units"
                                     },
                                     {
-                                        "file": "css/styles.css",
+                                        "file": "public/styles.css",
                                         "name": "check_media_queries"
                                     },
                                     {
-                                        "file": "css/styles.css",
+                                        "file": "public/styles.css",
                                         "name": "check_flexbox_usage"
                                     }
                                 ]
@@ -80,7 +80,7 @@
                                 "weight": 50,
                                 "tests": [
                                     {
-                                        "file": "css/styles.css",
+                                        "file": "public/styles.css",
                                         "name": "has_style",
                                         "calls": [
                                             ["font-size", 1],
@@ -105,18 +105,18 @@
                         "weight": 70,
                         "tests": [
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "check_bootstrap_linked"
                             },
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "check_internal_links",
                                 "calls": [
                                     [3]
                                 ]
                             },
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "has_class",
                                 "calls": [
                                     [["container", "container-fluid"], 1],
@@ -133,11 +133,11 @@
                         "weight": 30,
                         "tests": [
                             {
-                                "file": "css/styles.css",
+                                "file": "public/styles.css",
                                 "name": "check_media_queries"
                             },
                             {
-                                "file": "css/styles.css",
+                                "file": "public/styles.css",
                                 "name": "has_style",
                                 "calls": [
                                     ["margin", 1],
@@ -163,21 +163,21 @@
                         "weight": 70,
                         "tests": [
                             {
-                                "file": "app.js",
+                                "file": "public/app.js",
                                 "name": "js_has_json_array_with_id",
                                 "calls": [
                                     ["id", 3]
                                 ]
                             },
                             {
-                                "file": "app.js",
+                                "file": "public/app.js",
                                 "name": "js_uses_dom_manipulation",
                                 "calls": [
                                     [["createElement", "appendChild", "innerHTML", "querySelector"], 4]
                                 ]
                             },
                             {
-                                "file": "app.js",
+                                "file": "public/app.js",
                                 "name": "js_uses_query_string_parsing"
                             }
                         ]
@@ -186,18 +186,18 @@
                         "weight": 30,
                         "tests": [
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "link_points_to_page_with_query_param",
                                 "calls": [
-                                    ["detalhes.html", "id", 3]
+                                    ["public/detalhes.html", "id", 3]
                                 ]
                             },
                             {
                                 "file": "all",
                                 "name": "has_no_js_framework",
                                 "calls": [
-                                    ["index.html","app.js"],
-                                    ["detalhes.html","app.js"]
+                                    ["index.html","public/app.js"],
+                                    ["public/detalhes.html","public/app.js"]
                                 ]
                             }
                         ]
@@ -216,7 +216,7 @@
                         "weight": 20,
                         "tests": [
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "check_all_images_have_alt"
                             }
                         ]
@@ -225,7 +225,7 @@
                         "weight": 80,
                         "tests": [
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "check_head_details",
                                 "calls": [
                                     ["title"],
@@ -233,7 +233,7 @@
                                 ]
                             },
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "check_attribute_and_value",
                                 "calls": [
                                     ["meta", "charset", "UTF-8"],
@@ -254,7 +254,7 @@
                         "weight": 60,
                         "tests": [
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "has_class",
                                 "calls": [
                                     [["card"], 1],
@@ -275,14 +275,14 @@
                         "weight": 40,
                         "tests": [
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "has_class",
                                 "calls": [
                                     [["mt-*", "ms-*", "me-*", "mb-*", "pt-*", "ps-*", "pe-*", "pb-*", "gap-*"], 8]
                                 ]
                             },
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "has_class",
                                 "calls": [
                                     [["w-*", "mh-*", "mw-*", "vw-*", "vh-*"], 4]
@@ -304,25 +304,25 @@
                         "weight": 50,
                         "tests": [
                             {
-                                "file": "css/styles.css",
+                                "file": "public/styles.css",
                                 "name": "check_id_selector_over_usage",
                                 "calls": [
                                     [2]
                                 ]
                             },
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "has_forbidden_tag",
                                 "calls": [
                                     ["script"]
                                 ]
                             },
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "check_html_direct_children"
                             },
                             {
-                                "file": "index.html",
+                                "file": "public/index.html",
                                 "name": "check_tag_not_inside",
                                 "calls": [
                                     ["header", "main"],
@@ -346,7 +346,7 @@
                                 "file": "all",
                                 "name": "check_project_structure",
                                 "calls": [
-                                    ["css/styles.css"]
+                                    ["public/styles.css"]
                                 ]
                             }
                         ]
