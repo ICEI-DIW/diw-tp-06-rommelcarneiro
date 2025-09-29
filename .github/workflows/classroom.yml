@@ -1,0 +1,30 @@
+name: Autograderr
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  grading:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]' 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+           path: submission
+
+      - name: Check repository criteria 
+        uses: webtech-network/autograder@v5
+        with: 
+          template_preset : "web dev"
+          feedback-type: "ai"
+          openai_key: ${{ secrets.OPENAI_KEY }}
+          redis_url: ${{ secrets.REDIS_URL }}
+          redis_token: ${{ secrets.REDIS_TOKEN }}
+          
