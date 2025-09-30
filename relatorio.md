@@ -2,51 +2,37 @@
 <sup>Este é um feedback gerado por IA e pode conter erros. Você tem 9 créditos restantes.</sup>
 
 Olá, **rommelcarneiro**! Aqui está um feedback detalhado sobre sua atividade.
-> **Nota Final:** **`49.52 / 100`**
+> **Nota Final:** **`48.66 / 100`**
 ---
-# Olá! 👋
+# Feedback do Code Review
 
-Primeiramente, parabéns pelo seu progresso até agora! Seu código está bem estruturado e você já implementou muitas funcionalidades importantes. No entanto, há algumas melhorias que podemos fazer para aperfeiçoar ainda mais o seu projeto. Vamos lá!
+Olá, colega! Parabéns pelo esforço que você colocou no seu projeto até agora! Vamos passar por algumas áreas que precisam de aprimoramento e eu vou oferecer algumas sugestões para te ajudar a melhorar ainda mais seu código.
 
-## HTML
+## Pontos de Atenção 🚩
 
-Você fez um bom trabalho garantindo que todas as suas imagens tenham um atributo `alt`, o que é ótimo para a acessibilidade. E também está cuidando bem da semântica do seu documento, utilizando as tags `header`, `main`, `section`, `article` e `footer`. Além disso, você está utilizando corretamente as meta tags no `head` do documento. Esses são ótimos hábitos a se manter!
+Primeiramente, percebi que seu arquivo `public/detalhes.html` está faltando. Não se esqueça de que você precisa de uma página de detalhes para exibir o conteúdo completo de uma notícia. Essa página deve ser capaz de ler o 'id' da URL, encontrar o item correspondente na estrutura de dados e exibir suas informações.
 
-No entanto, percebi que você está utilizando muitos seletores de ID em seu CSS. Isso pode tornar o código mais difícil de manter no futuro devido à especificidade alta dos seletores de ID. Como boa prática, recomendo utilizar classes sempre que possível.
+Em segundo lugar, a estrutura de dados em seu arquivo `app.js` não está correta. Você precisa criar um array de objetos, onde cada objeto representa uma notícia e possui um 'id'. Se tiver dúvidas sobre como fazer isso, confira [este tutorial](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON).
 
-## CSS
+Terceiro, você precisa usar a manipulação do DOM para renderizar os cards de notícias na sua página inicial de forma dinâmica. Isso significa que você precisa criar elementos HTML em seu JavaScript e preenchê-los com dados de suas notícias. Se você não tem certeza de como fazer isso, [este guia](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction) pode te ajudar.
 
-Sobre o CSS, você está usando uma estrutura bem organizada e fácil de entender. Mas percebi que você está usando unidades absolutas (`px`) em seu CSS. Isso pode dificultar a responsividade do design. Recomendo que você use unidades relativas, como `em`, `rem`, `%`, `vh`, `vw`, para que o design do seu site possa se adaptar melhor a diferentes tamanhos de tela e configurações de zoom. 
+Por último, cada card de notícia na sua página inicial deve ter um link que aponte para a página de detalhes, com o 'id' da notícia na query string (por exemplo, `detalhes.html?id=1`). Isso permitirá que a página de detalhes saiba qual notícia exibir. Para fazer isso, você precisará usar [URLSearchParams](https://developer.mozilla.org/pt-BR/docs/Web/API/URLSearchParams) para ler os parâmetros da URL.
 
-Você pode aprender mais sobre unidades relativas neste [link](https://www.w3schools.com/cssref/css_units.asp).
+## Oportunidades de Melhoria 💡
 
-## JavaScript
+Em relação ao CSS, notei que você usou medidas absolutas (como `px`) em vez de medidas relativas (como `em`, `rem`, `%`, `vh`, `vw`). Recomendo que você mude para medidas relativas, pois elas tornarão seu design mais flexível e melhor adaptado a diferentes tamanhos de tela.
 
-Notei que você está usando um alerta no JavaScript para testar se o arquivo está sendo carregado corretamente. Isso é uma boa prática durante o desenvolvimento, mas lembre-se de removê-lo quando você começar a implementar a funcionalidade real no JavaScript.
+Além disso, percebi que você usou seletores de ID em seu CSS mais do que o recomendado. Embora os IDs sejam úteis para referenciar elementos específicos em seu JavaScript, eles podem tornar seu CSS difícil de manter e reutilizar, pois têm uma especificidade muito alta. Recomendo que você mude para o uso de classes sempre que possível.
 
-Agora, então, vamos falar sobre as funcionalidades que ainda precisam ser implementadas no JavaScript. 
+## Coisas que você fez bem! 🎉
 
-Primeiro, você precisa criar uma estrutura de dados (array de objetos) no JavaScript para armazenar as informações das notícias. Cada objeto deve ter um ID único. Esta estrutura de dados será usada para preencher dinamicamente os cards de notícias na página `index.html` e também para exibir os detalhes de uma notícia na página `detalhes.html`.
+Quero destacar alguns aspectos positivos do seu trabalho:
 
-Depois de criar a estrutura de dados, você precisa usar a manipulação do DOM para criar os cards de notícias dinamicamente na página `index.html`. Cada card deve ter um link para a página `detalhes.html` com o ID da notícia na query string da URL.
+- Muito bem ao garantir que todas as suas imagens tenham um atributo `alt`! Isso é ótimo para a acessibilidade.
+- Parabéns por configurar corretamente as tags `meta` e `title` no cabeçalho do seu HTML! Isso é importante para a otimização de mecanismos de busca (SEO).
+- Você fez um ótimo trabalho ao usar classes em seus elementos HTML! Isso torna seu CSS mais reutilizável e fácil de manter.
 
-Na página `detalhes.html`, você precisa ler o ID da notícia da query string da URL, encontrar a notícia correspondente na estrutura de dados e exibir seus detalhes.
-
-Você pode aprender mais sobre como manipular o DOM neste [link](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction) e como trabalhar com a estrutura de dados JSON neste [link](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON). E este [tutorial](https://developer.mozilla.org/pt-BR/docs/Web/API/URLSearchParams) pode te ajudar a entender como ler parâmetros da query string da URL.
-
-## Resumo
-
-Em resumo, aqui estão os pontos a serem trabalhados:
-
-1. Tente usar classes em vez de IDs em seu CSS.
-2. Use unidades relativas em vez de absolutas em seu CSS.
-3. Crie uma estrutura de dados no JavaScript para armazenar as informações das notícias.
-4. Use manipulação do DOM para criar dinamicamente os cards de notícias na página `index.html`.
-5. Crie links para a página `detalhes.html` com o ID da notícia na query string da URL.
-6. Na página `detalhes.html`, leia o ID da notícia da URL, encontre a notícia correspondente na estrutura de dados e exiba seus detalhes.
-
-Espero que estas sugestões sejam úteis para você! Mantenha o ótimo trabalho e continue codificando! 💻🚀
-
+Espero que este feedback seja útil para você! Lembre-se de que a prática leva à perfeição. Continue trabalhando duro e você verá melhorias constantes. 🚀
 
 ---
 
@@ -55,6 +41,7 @@ Espero que estas sugestões sejam úteis para você! Mantenha o ótimo trabalho 
 |:---|:---|:---|
 | Revisar | `link` | **Teste:** `check_internal_links_to_article`<br>**O que ele faz:** *Verifica a existência de um número mínimo de links âncora internos apontando para IDs em tags `<article>`.*<br>**Parâmetros:** <sub>`required_count`: `4`</sub> |
 | Revisar | `responsivity` | **Teste:** `uses_relative_units`<br>**O que ele faz:** *Verifica se o arquivo CSS usa unidades relativas como em, rem, %, vh, vw.*<br>**Parâmetros:** <sub>N/A</sub> |
+| Revisar | `style` | **Teste:** `has_style`<br>**O que ele faz:** *Verifica se uma regra de estilo CSS específica aparece um número mínimo de vezes.*<br>**Parâmetros:** <sub>`style`: `text-align`, `required_count`: `1`</sub> |
 | Revisar | `bootstrap_fundamentals` | **Teste:** `has_class`<br>**O que ele faz:** *Verifica a presença de classes CSS específicas, com suporte a curingas, um número mínimo de vezes.*<br>**Parâmetros:** <sub>`class_names`: `['d-flex', 'd-*-flex']`, `required_count`: `1`</sub> |
 | Revisar | `dynamic_js` | **Teste:** `js_has_json_array_with_id`<br>**O que ele faz:** *Verifica a existência de um array de objetos JS onde cada objeto possui uma chave específica obrigatória.*<br>**Parâmetros:** <sub>`required_key`: `id`, `min_items`: `3`</sub> |
 | Revisar | `dynamic_js` | **Teste:** `js_uses_dom_manipulation`<br>**O que ele faz:** *Verifica se o código JS usa um número mínimo de métodos comuns de manipulação do DOM.*<br>**Parâmetros:** <sub>`methods`: `['createElement', 'appendChild', 'innerHTML', 'querySelector']`, `required_count`: `4`</sub> |
